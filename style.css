@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --lightPink: hsl(275, 100%, 97%);
+  --grayishPurple: hsl(292, 16%, 49%);
+  --darkPurple: hsl(292, 42%, 14%);
+
+  --fontSize: 16px;
+  --fontWeight400: 400;
+  --fontWeight600: 600;
+  --fontWeight700: 700;
+
+  --fontFamily: "Work Sans", sans-serif;
+}
+
+body {
+  background-color: var(--lightPink);
+  font-family: var(--fontFamily);
+}
+
+#header {
+  background-image: url("/assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 250px;
+  width: 100%;
+}
+
+.FAQs_Container {
+  background-color: var(--White);
+  width: 85%;
+  min-height: 200px;
+  max-height: 90vh;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 40px 0px var(--grayishPurple);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  overflow-y: auto;
+}
+
+.FAQsTitle {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.FAQsTitle img {
+  width: 1.5rem;
+}
+
+.FAQsTitle h1 {
+  font-weight: var(--fontWeight700);
+  font-size: 2rem;
+  color: var(--darkPurple);
+}
+
+.FAQsSection1 {
+  margin: 1rem 0;
+}
+
+.FAQsSection1:nth-child(3),
+.FAQsSection1:nth-child(4),
+.FAQsSection1:nth-child(5) {
+  border-top: 2px solid var(--lightPink);
+  padding-top: 1rem;
+}
+
+.quest1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+.FAQsSection1 h2 {
+  font-size: 1.05rem;
+  padding-right: 1rem;
+  color: var(--darkPurple);
+  font-weight: var(--fontWeight600);
+  line-height: 1.2rem;
+}
+
+.FAQsSection1 .quest1 ~ p {
+  color: var(--grayishPurple);
+  font-weight: var(--fontWeigh400);
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+
+  max-height: 0px;
+  overflow: hidden;
+
+  -webkit-transition: max-height 1s ease;
+  transition: max-height 1s ease;
+}
+
+.FAQsSection1 .quest1.active ~ p {
+  max-height: 300px;
+  overflow: auto;
+}
+
+/* footer */
+#footer {
+  position: absolute;
+  bottom: 2%;
+  right: 0;
+  left: 0;
+}
+
+/* attribution */
+.attribution {
+  font-size: 12px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* media queries */
+@media (min-width: 600px) {
+  .FAQs_Container {
+    max-width: 600px;
+  }
+
+  #header {
+    background-image: url("/assets/images/background-pattern-desktop.svg");
+    background-position: initial;
+    min-height: 300px;
+  }
+}
