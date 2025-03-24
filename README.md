@@ -33,7 +33,7 @@ My users are able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/faq-accordion-NEY9Z_nXk0)
 - Live Site URL: (https://thefaqaccordion.vercel.app/)
 
 ## My process
